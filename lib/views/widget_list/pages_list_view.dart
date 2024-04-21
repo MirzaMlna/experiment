@@ -32,7 +32,7 @@ class _PagesListViewState extends State<PagesListView> {
 }
 
 Widget views(BuildContext context) {
-  var items = AppRoutes.routes.entries.skip(0).toList();
+  var items = AppRoutes.routes.entries.skip(2).toList();
 
   items.sort((a, b) {
     return a.key

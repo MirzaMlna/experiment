@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:mobile_user/app/theme/app_colors.dart';
 
 import 'package:mobile_user/app/theme/app_text_style.dart';
 import 'package:mobile_user/widgets/app_appbar.dart';
 import 'package:mobile_user/widgets/app_button.dart';
-import 'package:mobile_user/widgets/app_icon_button.dart';
 import 'package:mobile_user/widgets/app_text_field.dart';
 
 class LoginView extends StatefulWidget {
