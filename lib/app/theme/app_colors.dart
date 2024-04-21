@@ -37,7 +37,7 @@ class AppColors {
 
   // Named Colors
   static const Color primary = blueLv1;
-  static const Color secondary = darkBlueLv1;
+  static const Color secondary = blackLv5;
   static const Color success = greenLv2;
   static const Color warning = yellowLv2;
   static const Color error = redLv2;

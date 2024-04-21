@@ -116,7 +116,7 @@ class AppButton extends StatelessWidget {
                   )
                 : null,
             color: enable ? buttonColor : disabledButtonColor,
-            borderRadius: BorderRadius.circular(rounded ? 100 : borderRadius),
+            borderRadius: BorderRadius.circular(rounded ? 10 : borderRadius),
             border: borderWidth != null
                 ? Border.all(
                     width: borderWidth!,

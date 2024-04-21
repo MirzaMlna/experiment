@@ -45,7 +45,7 @@ class _DevViewState extends State<DevView> {
                   ),
                   AppButton(
                     onTap: () {
-                      Navigator.pushNamed(context, '/pagesList');
+                      Navigator.pushNamed(context, '/pages-List');
                     },
                     text: 'Pages List',
                   ),
