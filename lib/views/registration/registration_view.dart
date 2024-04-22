@@ -32,93 +32,100 @@ class _RegistrationViewState extends State<RegistrationView> {
           padding: const EdgeInsets.all(10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Column(
-                children: [
-                  Text(
-                    'Mari Bergabung !',
-                    style: AppTextStyle.heading3(),
-                  ),
-                  Text(
-                    'Silahkan Lengkapi Isian Di Bawah Untuk Membuat Akun.',
-                    style: AppTextStyle.bodyMedium(
-                        fontWeight: AppFontWeight.regular),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 50,
-              ),
-              Text(
-                "Pilih Gender Anda",
-                style: AppTextStyle.heading5(),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              AppGenderSelect(),
-              SizedBox(
-                height: 20,
-              ),
-              AppTextField(labelText: 'Email'),
-              SizedBox(
-                height: 20,
-              ),
-              AppTextField(obscureText: true, labelText: 'Password'),
-              SizedBox(
-                height: 20,
-              ),
-              AppTextField(obscureText: true, labelText: 'Ulangi Password'),
-              SizedBox(
-                height: 20,
-              ),
-              GestureDetector(
-                child: AppTextField(
-                  controller: _registrationViewModel.dateController,
-                  labelText: 'Tanggal Lahir',
-                  enabled: false,
-                ),
-                onTap: () {
-                  _registrationViewModel.selectDate(context);
-                },
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              AppButton(
-                onTap: () {
-                  print("Buat Akun Button");
-                },
-                text: 'Buat Akun',
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Sudah punya akun? ",
-                    style: AppTextStyle.bodyMedium(
-                        fontWeight: AppFontWeight.regular),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      print('Login Here');
-                    },
-                    child: Text(
-                      "Masuk",
-                      style: AppTextStyle.bodyMedium(
-                          fontWeight: AppFontWeight.regular,
-                          color: AppColors.blueLv2),
-                    ),
-                  ),
-                ],
-              )
-            ],
+            children: [registerHeading(), registerForm(context)],
           ),
         )),
       ),
+    );
+  }
+
+  Widget registerHeading() {
+    return Column(
+      children: [
+        Text(
+          'Mari Bergabung !',
+          style: AppTextStyle.heading3(),
+        ),
+        Text(
+          'Silahkan Lengkapi Isian Di Bawah Untuk Membuat Akun.',
+          style: AppTextStyle.bodyMedium(fontWeight: AppFontWeight.regular),
+        ),
+        SizedBox(
+          height: 50,
+        ),
+      ],
+    );
+  }
+
+  Widget registerForm(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          "Pilih Gender Anda",
+          style: AppTextStyle.heading5(),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        AppGenderSelect(),
+        SizedBox(
+          height: 20,
+        ),
+        AppTextField(labelText: 'Email'),
+        SizedBox(
+          height: 20,
+        ),
+        AppTextField(obscureText: true, labelText: 'Password'),
+        SizedBox(
+          height: 20,
+        ),
+        AppTextField(obscureText: true, labelText: 'Ulangi Password'),
+        SizedBox(
+          height: 20,
+        ),
+        GestureDetector(
+          child: AppTextField(
+            controller: _registrationViewModel.dateController,
+            labelText: 'Tanggal Lahir',
+            enabled: false,
+          ),
+          onTap: () {
+            _registrationViewModel.selectDate(context);
+          },
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        AppButton(
+          onTap: () {
+            print("Buat Akun Button");
+          },
+          text: 'Buat Akun',
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Sudah punya akun? ",
+              style: AppTextStyle.bodyMedium(fontWeight: AppFontWeight.regular),
+            ),
+            GestureDetector(
+              onTap: () {
+                print('Login Here');
+              },
+              child: Text(
+                "Masuk",
+                style: AppTextStyle.bodyMedium(
+                    fontWeight: AppFontWeight.regular,
+                    color: AppColors.blueLv2),
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
