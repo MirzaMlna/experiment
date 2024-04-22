@@ -51,16 +51,15 @@ class _LoginViewState extends State<LoginView> {
                     labelText: 'Email',
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   AppTextField(
-                    obscureText: true,
                     labelText: 'Password',
                   ),
                 ],
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -105,7 +104,7 @@ class _LoginViewState extends State<LoginView> {
                 ],
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               AppButton(
                 onTap: () {
@@ -114,7 +113,7 @@ class _LoginViewState extends State<LoginView> {
                 text: 'Masuk',
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
