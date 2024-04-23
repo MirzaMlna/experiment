@@ -34,37 +34,90 @@ class AppTextField extends StatefulWidget {
 }
 
 class _AppTextFieldState extends State<AppTextField> {
+  bool _isVisible = true;
+
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      controller: widget.controller,
-      keyboardType: widget.keyboardType,
-      obscureText: widget.obscureText,
-      decoration: InputDecoration(
-          enabled: widget.enabled ? widget.enabled : false,
-          floatingLabelBehavior: FloatingLabelBehavior.always,
-          floatingLabelStyle: AppTextStyle.regular(size: 20),
-          labelText: widget.labelText,
-          hintText: widget.hintText,
-          labelStyle:
-              widget.labelStyle ?? TextStyle(color: AppColors.secondary),
-          hintStyle: widget.hintStyle,
-          enabledBorder: widget.border ??
-              OutlineInputBorder(
-                  borderSide:
-                      BorderSide(color: AppColors.secondary, width: 1.5),
-                  borderRadius:
-                      widget.borderRadius ?? BorderRadius.circular(10)),
-          disabledBorder: widget.border ??
-              OutlineInputBorder(
-                  borderSide:
-                      BorderSide(color: AppColors.secondary, width: 1.5),
-                  borderRadius:
-                      widget.borderRadius ?? BorderRadius.circular(10)),
-          focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: AppColors.primary, width: 1.5),
-              borderRadius: widget.borderRadius ?? BorderRadius.circular(10)),
-          focusColor: AppColors.primary),
-    );
+    return !widget.obscureText
+        ? TextFormField(
+            controller: widget.controller,
+            keyboardType: widget.keyboardType,
+            obscureText: widget.obscureText,
+            decoration: InputDecoration(
+                enabled: widget.enabled ? widget.enabled : false,
+                floatingLabelBehavior: FloatingLabelBehavior.always,
+                floatingLabelStyle: AppTextStyle.regular(size: 20),
+                labelText: widget.labelText,
+                hintText: widget.hintText,
+                labelStyle:
+                    widget.labelStyle ?? TextStyle(color: AppColors.secondary),
+                hintStyle: widget.hintStyle,
+                enabledBorder: widget.border ??
+                    OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: AppColors.secondary, width: 1.5),
+                        borderRadius:
+                            widget.borderRadius ?? BorderRadius.circular(10)),
+                disabledBorder: widget.border ??
+                    OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: AppColors.secondary, width: 1.5),
+                        borderRadius:
+                            widget.borderRadius ?? BorderRadius.circular(10)),
+                focusedBorder: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: AppColors.primary, width: 1.5),
+                    borderRadius:
+                        widget.borderRadius ?? BorderRadius.circular(10)),
+                focusColor: AppColors.primary),
+          )
+        : TextFormField(
+            controller: widget.controller,
+            keyboardType: widget.keyboardType,
+            obscureText: _isVisible,
+            decoration: InputDecoration(
+                enabled: widget.enabled ? widget.enabled : false,
+                floatingLabelBehavior: FloatingLabelBehavior.always,
+                floatingLabelStyle: AppTextStyle.regular(size: 20),
+                labelText: widget.labelText,
+                hintText: widget.hintText,
+                labelStyle:
+                    widget.labelStyle ?? TextStyle(color: AppColors.secondary),
+                hintStyle: widget.hintStyle,
+                enabledBorder: widget.border ??
+                    OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: AppColors.secondary, width: 1.5),
+                        borderRadius:
+                            widget.borderRadius ?? BorderRadius.circular(10)),
+                disabledBorder: widget.border ??
+                    OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: AppColors.secondary, width: 1.5),
+                        borderRadius:
+                            widget.borderRadius ?? BorderRadius.circular(10)),
+                focusedBorder: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: AppColors.primary, width: 1.5),
+                    borderRadius:
+                        widget.borderRadius ?? BorderRadius.circular(10)),
+                focusColor: AppColors.primary,
+                suffix: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _isVisible = !_isVisible;
+                    });
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      right: 10,
+                    ),
+                    child: Icon(
+                      _isVisible ? Icons.visibility_off : Icons.visibility,
+                      color: AppColors.secondary,
+                    ),
+                  ),
+                )),
+          );
   }
 }
