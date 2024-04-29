@@ -21,7 +21,7 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppAppbar(),
+      appBar: const AppAppbar(),
       body: SingleChildScrollView(
         child: SafeArea(
             child: Padding(
@@ -42,24 +42,26 @@ class _LoginViewState extends State<LoginView> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
-              Column(
-                children: [
-                  AppTextField(
-                    labelText: 'Email',
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  AppTextField(
-                    obscureText: true,
-                    labelText: 'Password',
-                  ),
-                ],
+              const Form(
+                child: Column(
+                  children: [
+                    AppTextField(
+                      labelText: 'Email',
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    AppTextField(
+                      obscureText: true,
+                      labelText: 'Password',
+                    ),
+                  ],
+                ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -104,7 +106,7 @@ class _LoginViewState extends State<LoginView> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               AppButton(
@@ -113,7 +115,7 @@ class _LoginViewState extends State<LoginView> {
                 },
                 text: 'Masuk',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(

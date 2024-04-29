@@ -117,7 +117,8 @@ class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
               children: [
                 Text(
                   title ?? '',
-                  style: titleTextStyle ?? AppTextStyle.heading6(),
+                  style: titleTextStyle ??
+                      AppTextStyle.heading6(color: AppColors.white),
                 ),
                 subtitle != null
                     ? Text(

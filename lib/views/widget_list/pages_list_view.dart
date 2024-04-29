@@ -24,7 +24,7 @@ class _PagesListViewState extends State<PagesListView> {
         backgroundColor: AppColors.primary,
       ),
       body: Padding(
-        padding: EdgeInsets.only(left: 10),
+        padding: const EdgeInsets.only(left: 10),
         child: views(context),
       ),
     );

@@ -34,6 +34,7 @@ class AppColors {
   static const Color black = Colors.black;
   static const Color white = Colors.white;
   static const Color transparent = Colors.transparent;
+  static const Color pastelBlue = Color(0xffbae1ff);
 
   // Named Colors
   static const Color primary = blueLv1;

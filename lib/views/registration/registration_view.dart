@@ -22,10 +22,11 @@ class _RegistrationViewState extends State<RegistrationView> {
   final RegistrationViewModel _registrationViewModel =
       locator<RegistrationViewModel>();
 
+  bool _isMarried = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppAppbar(),
       body: SingleChildScrollView(
         child: SafeArea(
             child: Padding(
@@ -51,7 +52,7 @@ class _RegistrationViewState extends State<RegistrationView> {
           style: AppTextStyle.bodyMedium(fontWeight: AppFontWeight.regular),
         ),
         SizedBox(
-          height: 50,
+          height: 40,
         ),
       ],
     );
@@ -92,6 +93,9 @@ class _RegistrationViewState extends State<RegistrationView> {
           onTap: () {
             _registrationViewModel.selectDate(context);
           },
+        ),
+        SizedBox(
+          height: 10,
         ),
         SizedBox(
           height: 20,

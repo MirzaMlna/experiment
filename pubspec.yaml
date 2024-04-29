@@ -39,6 +39,7 @@ dependencies:
   change_notifier: ^0.24.0
   get_it: ^7.7.0
   provider: ^6.1.2
+  faker: ^2.1.0
 
 dev_dependencies:
   flutter_test:

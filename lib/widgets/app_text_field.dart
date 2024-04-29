@@ -3,7 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:mobile_user/app/theme/app_colors.dart';
 import 'package:mobile_user/app/theme/app_text_style.dart';
 
+// enum AppTextFieldType {
+//   text,
+//   password,
+//   number,
+//   phone,
+//   phoneCompact,
+//   otp,
+//   search,
+//   currency,
+// }
+
 class AppTextField extends StatefulWidget {
+  // final AppTextFieldType type;
   final String labelText;
   final String? hintText;
   final TextStyle? labelStyle;
@@ -17,6 +29,7 @@ class AppTextField extends StatefulWidget {
 
   const AppTextField({
     super.key,
+    // this.type,
     required this.labelText,
     this.hintText,
     this.labelStyle,
@@ -40,6 +53,12 @@ class _AppTextFieldState extends State<AppTextField> {
   Widget build(BuildContext context) {
     return !widget.obscureText
         ? TextFormField(
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter some text';
+              }
+              return null;
+            },
             controller: widget.controller,
             keyboardType: widget.keyboardType,
             obscureText: widget.obscureText,
@@ -49,24 +68,24 @@ class _AppTextFieldState extends State<AppTextField> {
                 floatingLabelStyle: AppTextStyle.regular(size: 20),
                 labelText: widget.labelText,
                 hintText: widget.hintText,
-                labelStyle:
-                    widget.labelStyle ?? TextStyle(color: AppColors.secondary),
+                labelStyle: widget.labelStyle ??
+                    const TextStyle(color: AppColors.secondary),
                 hintStyle: widget.hintStyle,
                 enabledBorder: widget.border ??
                     OutlineInputBorder(
-                        borderSide:
-                            BorderSide(color: AppColors.secondary, width: 1.5),
+                        borderSide: const BorderSide(
+                            color: AppColors.secondary, width: 1.5),
                         borderRadius:
                             widget.borderRadius ?? BorderRadius.circular(10)),
                 disabledBorder: widget.border ??
                     OutlineInputBorder(
-                        borderSide:
-                            BorderSide(color: AppColors.secondary, width: 1.5),
+                        borderSide: const BorderSide(
+                            color: AppColors.secondary, width: 1.5),
                         borderRadius:
                             widget.borderRadius ?? BorderRadius.circular(10)),
                 focusedBorder: OutlineInputBorder(
                     borderSide:
-                        BorderSide(color: AppColors.primary, width: 1.5),
+                        const BorderSide(color: AppColors.primary, width: 1.5),
                     borderRadius:
                         widget.borderRadius ?? BorderRadius.circular(10)),
                 focusColor: AppColors.primary),
@@ -81,24 +100,24 @@ class _AppTextFieldState extends State<AppTextField> {
                 floatingLabelStyle: AppTextStyle.regular(size: 20),
                 labelText: widget.labelText,
                 hintText: widget.hintText,
-                labelStyle:
-                    widget.labelStyle ?? TextStyle(color: AppColors.secondary),
+                labelStyle: widget.labelStyle ??
+                    const TextStyle(color: AppColors.secondary),
                 hintStyle: widget.hintStyle,
                 enabledBorder: widget.border ??
                     OutlineInputBorder(
-                        borderSide:
-                            BorderSide(color: AppColors.secondary, width: 1.5),
+                        borderSide: const BorderSide(
+                            color: AppColors.secondary, width: 1.5),
                         borderRadius:
                             widget.borderRadius ?? BorderRadius.circular(10)),
                 disabledBorder: widget.border ??
                     OutlineInputBorder(
-                        borderSide:
-                            BorderSide(color: AppColors.secondary, width: 1.5),
+                        borderSide: const BorderSide(
+                            color: AppColors.secondary, width: 1.5),
                         borderRadius:
                             widget.borderRadius ?? BorderRadius.circular(10)),
                 focusedBorder: OutlineInputBorder(
                     borderSide:
-                        BorderSide(color: AppColors.primary, width: 1.5),
+                        const BorderSide(color: AppColors.primary, width: 1.5),
                     borderRadius:
                         widget.borderRadius ?? BorderRadius.circular(10)),
                 focusColor: AppColors.primary,
