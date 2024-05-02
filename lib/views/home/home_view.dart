@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:mobile_user/app/theme/app_colors.dart';
 import 'package:mobile_user/app/theme/app_text_style.dart';
 import 'package:mobile_user/widgets/app_appBar.dart';
@@ -145,10 +147,45 @@ class _HomeViewState extends State<HomeView> {
                           ),
                           AppExperienceStoryCard(
                               isLasting: true,
+                              image:
+                                  'lib/app/assets/images/old_man_with_wife.jpg',
                               title: 'Ujang Bin Saprudin',
                               subtitle:
                                   'Menceritakan perjalanan Ujang dari sebelum menikah sampai mempertahankan pernikahannya sampai sekarang',
-                              onTap: () {})
+                              onTap: () {}),
+                          AppExperienceStoryCard(
+                              isLasting: false,
+                              subtitle:
+                                  'Menceritakan perjalanan Ujang dari sebelum menikah sampai mempertahankan pernikahannya sampai sekarang',
+                              onTap: () {}),
+                          AppExperienceStoryCard(
+                              isLasting: true,
+                              image:
+                                  'lib/app/assets/images/old_man_with_wife.jpg',
+                              title: 'Ujang Bin Saprudin',
+                              subtitle:
+                                  'Menceritakan perjalanan Ujang dari sebelum menikah sampai mempertahankan pernikahannya sampai sekarang',
+                              onTap: () {}),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Align(
+                            alignment: Alignment.center,
+                            child: InkWell(
+                              splashColor: AppColors.secondary,
+                              borderRadius: BorderRadius.circular(10),
+                              onTap: () {},
+                              child: Text(
+                                'Tampilkan Semua',
+                                style: AppTextStyle.bodyLarge(
+                                    color: AppColors.blueLv2,
+                                    fontWeight: AppFontWeight.regular),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 100,
+                          )
                         ],
                       ),
                     ),

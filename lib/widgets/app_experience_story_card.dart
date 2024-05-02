@@ -4,17 +4,19 @@ import 'package:mobile_user/app/theme/app_colors.dart';
 import 'package:mobile_user/app/theme/app_text_style.dart';
 
 class AppExperienceStoryCard extends StatefulWidget {
-  final String title;
+  final String? title;
   final String subtitle;
   final Color? backgroundColor;
   final VoidCallback onTap;
+  final String? image;
   final bool isLasting;
   // final double? width;
   const AppExperienceStoryCard(
-      {required this.title,
+      {this.title,
       required this.subtitle,
       this.backgroundColor,
       required this.onTap,
+      this.image,
       required this.isLasting,
       // this.width,
       super.key});
@@ -55,8 +57,8 @@ class _AppExperienceStoryCardState extends State<AppExperienceStoryCard> {
                         topRight: Radius.circular(10),
                       ),
                       // ! Pastikan ukuran gambar 16 : 6 atau 1920 x 720
-                      child: Image.asset(
-                          'lib/app/assets/images/old_man_with_wife.jpg')),
+                      child: Image.asset(widget.image ??
+                          'lib/app/assets/images/unknown_image.jpg')),
                 ),
                 const SizedBox(
                   height: 10,
@@ -71,19 +73,22 @@ class _AppExperienceStoryCardState extends State<AppExperienceStoryCard> {
                         children: [
                           Flexible(
                             child: Text(
-                              widget.title,
+                              widget.title ?? 'Nama Dirahasiakan',
                               style: AppTextStyle.heading6(),
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
                           Container(
-                            color: widget.isLasting
-                                ? AppColors.success
-                                : AppColors.error,
                             padding: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                color: widget.isLasting
+                                    ? AppColors.success
+                                    : AppColors.error,
+                                borderRadius: BorderRadius.circular(5)),
                             child: Text(
                               widget.isLasting ? 'Langgeng' : 'Berakhir',
                               style: AppTextStyle.bodySmall(
+                                color: AppColors.white,
                                 fontWeight: AppFontWeight.regular,
                               ),
                             ),
