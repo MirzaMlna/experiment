@@ -69,18 +69,18 @@ class _AppTextFieldState extends State<AppTextField> {
                 labelText: widget.labelText,
                 hintText: widget.hintText,
                 labelStyle: widget.labelStyle ??
-                    const TextStyle(color: AppColors.secondary),
+                    const TextStyle(color: AppColors.disabled),
                 hintStyle: widget.hintStyle,
                 enabledBorder: widget.border ??
                     OutlineInputBorder(
                         borderSide: const BorderSide(
-                            color: AppColors.secondary, width: 1.5),
+                            color: AppColors.disabled, width: 1.5),
                         borderRadius:
                             widget.borderRadius ?? BorderRadius.circular(10)),
                 disabledBorder: widget.border ??
                     OutlineInputBorder(
                         borderSide: const BorderSide(
-                            color: AppColors.secondary, width: 1.5),
+                            color: AppColors.disabled, width: 1.5),
                         borderRadius:
                             widget.borderRadius ?? BorderRadius.circular(10)),
                 focusedBorder: OutlineInputBorder(
@@ -101,18 +101,18 @@ class _AppTextFieldState extends State<AppTextField> {
                 labelText: widget.labelText,
                 hintText: widget.hintText,
                 labelStyle: widget.labelStyle ??
-                    const TextStyle(color: AppColors.secondary),
+                    const TextStyle(color: AppColors.disabled),
                 hintStyle: widget.hintStyle,
                 enabledBorder: widget.border ??
                     OutlineInputBorder(
                         borderSide: const BorderSide(
-                            color: AppColors.secondary, width: 1.5),
+                            color: AppColors.disabled, width: 1.5),
                         borderRadius:
                             widget.borderRadius ?? BorderRadius.circular(10)),
                 disabledBorder: widget.border ??
                     OutlineInputBorder(
                         borderSide: const BorderSide(
-                            color: AppColors.secondary, width: 1.5),
+                            color: AppColors.disabled, width: 1.5),
                         borderRadius:
                             widget.borderRadius ?? BorderRadius.circular(10)),
                 focusedBorder: OutlineInputBorder(
@@ -133,7 +133,7 @@ class _AppTextFieldState extends State<AppTextField> {
                     ),
                     child: Icon(
                       _isVisible ? Icons.visibility_off : Icons.visibility,
-                      color: AppColors.secondary,
+                      color: AppColors.disabled,
                     ),
                   ),
                 )),
