@@ -74,27 +74,55 @@ class _HomeViewState extends State<HomeView> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
-            // Padding(
-            //     padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            //     child: SingleChildScrollView(
-            //       scrollDirection: Axis.horizontal,
-            //       child: Row(
-            //         children: [
-            //           Material(
-            //             color: AppColors.transparent,
-            //             child: InkWell(
-            //               splashColor: AppColors.primary,
-            //               onTap: () {},
-            //               child: Column(
-            //                 children: [Icon(Icons.book), Text('Edukasi')],
-            //               ),
-            //             ),
-            //           )
-            //         ],
-            //       ),
-            //     ))
+            Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.all(10.0),
+                      decoration: BoxDecoration(
+                          color: AppColors.secondary,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(
+                        children: [
+                          Text(
+                            'Persiapkan dirimu sebelum menikah!',
+                            style: AppTextStyle.heading6(),
+                          ),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: [
+                                Material(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: AppColors.transparent,
+                                  child: InkWell(
+                                    borderRadius: BorderRadius.circular(10),
+                                    splashColor: AppColors.secondary,
+                                    onTap: () {},
+                                    child: Container(
+                                      padding: EdgeInsets.all(10),
+                                      child: Column(
+                                        children: [
+                                          Icon(Icons.menu_book_rounded),
+                                          Text('E-Book')
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ))
           ],
         )),
       ),
