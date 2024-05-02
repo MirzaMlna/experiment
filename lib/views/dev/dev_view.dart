@@ -28,7 +28,7 @@ class _DevViewState extends State<DevView> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("This Is Dev View"),
+            const Text("This Is Dev View"),
             Padding(
               padding: const EdgeInsets.symmetric(
                   horizontal: AppSizes.padding, vertical: AppSizes.padding),
@@ -40,7 +40,7 @@ class _DevViewState extends State<DevView> {
                     },
                     text: 'App View',
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   AppButton(

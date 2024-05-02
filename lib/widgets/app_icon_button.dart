@@ -35,7 +35,7 @@ class AppIconButton extends StatelessWidget {
     this.iconButtonWidth,
     this.iconButtonHeight,
     this.borderWidth,
-    this.padding = const EdgeInsets.only(left: 10),
+    this.padding = const EdgeInsets.all(10),
     this.iconPadding = EdgeInsets.zero,
     this.textPadding = const EdgeInsets.only(top: AppSizes.padding / 4),
     this.enable = true,

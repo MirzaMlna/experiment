@@ -51,7 +51,7 @@ class _RegistrationViewState extends State<RegistrationView> {
           'Silahkan Lengkapi Isian Di Bawah Untuk Membuat Akun.',
           style: AppTextStyle.bodyMedium(fontWeight: AppFontWeight.regular),
         ),
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
       ],
@@ -61,22 +61,22 @@ class _RegistrationViewState extends State<RegistrationView> {
   Widget registerForm(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
-        AppTextField(labelText: 'Email'),
-        SizedBox(
+        const AppTextField(labelText: 'Email'),
+        const SizedBox(
           height: 20,
         ),
-        AppTextField(obscureText: true, labelText: 'Password'),
-        SizedBox(
+        const AppTextField(obscureText: true, labelText: 'Password'),
+        const SizedBox(
           height: 20,
         ),
-        AppTextField(obscureText: true, labelText: 'Ulangi Password'),
-        SizedBox(
+        const AppTextField(obscureText: true, labelText: 'Ulangi Password'),
+        const SizedBox(
           height: 20,
         ),
         GestureDetector(
@@ -89,10 +89,10 @@ class _RegistrationViewState extends State<RegistrationView> {
             _registrationViewModel.selectDate(context);
           },
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         AppButton(
@@ -101,7 +101,7 @@ class _RegistrationViewState extends State<RegistrationView> {
           },
           text: 'Buat Akun',
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Row(

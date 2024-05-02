@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mobile_user/app/theme/app_colors.dart';
 import 'package:mobile_user/app/theme/app_text_style.dart';
 import 'package:mobile_user/widgets/app_appBar.dart';
+import 'package:mobile_user/widgets/app_icon_button.dart';
+import 'package:mobile_user/widgets/app_experience_story_card.dart';
 import 'package:mobile_user/widgets/app_static_card.dart';
 
 class HomeView extends StatefulWidget {
@@ -24,9 +26,9 @@ class _HomeViewState extends State<HomeView> {
             onTap: () {
               print('Go To Settings');
             },
-            child: CircleAvatar(
-              child: Icon(Icons.person),
+            child: const CircleAvatar(
               backgroundColor: AppColors.white,
+              child: Icon(Icons.person),
             ),
           ),
         ],
@@ -73,7 +75,7 @@ class _HomeViewState extends State<HomeView> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Padding(
@@ -83,46 +85,75 @@ class _HomeViewState extends State<HomeView> {
                   children: [
                     Container(
                       width: double.infinity,
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       decoration: BoxDecoration(
-                          color: AppColors.secondary,
+                          color: AppColors.white,
                           borderRadius: BorderRadius.circular(10)),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Persiapkan dirimu sebelum menikah!',
+                            'Edukasi dirimu sebelum menikah',
                             style: AppTextStyle.heading6(),
                           ),
+                          const SizedBox(
+                            height: 10,
+                          ),
                           SingleChildScrollView(
+                            padding: const EdgeInsets.only(bottom: 20),
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                Material(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: AppColors.transparent,
-                                  child: InkWell(
-                                    borderRadius: BorderRadius.circular(10),
-                                    splashColor: AppColors.secondary,
-                                    onTap: () {},
-                                    child: Container(
-                                      padding: EdgeInsets.all(10),
-                                      child: Column(
-                                        children: [
-                                          Icon(Icons.menu_book_rounded),
-                                          Text('E-Book')
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
+                                AppIconButton(
+                                    icon: const Icon(Icons.menu_book_rounded),
+                                    text: 'E-Book',
+                                    onTap: () {}),
+                                AppIconButton(
+                                    icon: const Icon(Icons.article),
+                                    text: 'Artikel',
+                                    onTap: () {}),
+                                AppIconButton(
+                                    icon: const Icon(Icons.play_arrow_rounded),
+                                    text: 'Video',
+                                    onTap: () {}),
+                                AppIconButton(
+                                    icon: const Icon(Icons.balance_rounded),
+                                    text: 'Hukum',
+                                    onTap: () {}),
+                                AppIconButton(
+                                    icon: const Icon(
+                                        Icons.local_fire_department_rounded),
+                                    text: 'Motivasi',
+                                    onTap: () {}),
                               ],
                             ),
                           ),
                         ],
                       ),
                     ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Belajar dari pengalaman',
+                            style: AppTextStyle.heading6(),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          AppExperienceStoryCard(
+                              isLasting: true,
+                              title: 'Ujang Bin Saprudin',
+                              subtitle:
+                                  'Menceritakan perjalanan Ujang dari sebelum menikah sampai mempertahankan pernikahannya sampai sekarang',
+                              onTap: () {})
+                        ],
+                      ),
+                    ),
                   ],
-                ))
+                )),
           ],
         )),
       ),

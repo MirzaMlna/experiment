@@ -27,16 +27,16 @@ class _MainViewState extends State<MainView> {
         title: 'Main View',
       ),
       floatingActionButton: FloatingActionButton(
-          child: const Icon(
-            Icons.emoji_emotions,
-            color: AppColors.primary,
-          ),
           backgroundColor: AppColors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
           onPressed: () {
             print('Anjay');
-          }),
+          },
+          child: const Icon(
+            Icons.emoji_emotions,
+            color: AppColors.primary,
+          )),
       floatingActionButtonLocation:
           FloatingActionButtonLocation.miniCenterDocked,
       bottomNavigationBar: BottomNavigationBar(

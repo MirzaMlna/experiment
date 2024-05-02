@@ -15,7 +15,7 @@ class SavingsView extends StatefulWidget {
 class _SavingsViewState extends State<SavingsView> {
   @override
   Widget build(BuildContext context) {
-    return NavigationExample();
+    return const NavigationExample();
   }
 }
 
@@ -30,7 +30,7 @@ class _NavigationExampleState extends State<NavigationExample> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: AppAppbar(
         title: 'Savings Screen',
       ),
