@@ -3,12 +3,9 @@ import 'package:flutter/material.dart';
 import 'app_colors.dart';
 import 'app_theme.dart';
 
-// App Currency Formatter
-// v.2.0.1
-// by Elriz Wiraswara
-
 // Custom font weight name
 enum AppFontWeight {
+  light,
   regular,
   medium,
   semibold,

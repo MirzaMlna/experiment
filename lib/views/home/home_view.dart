@@ -17,51 +17,87 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppAppbar(
+      appBar: AppAppbar(
         title: 'Home Screen',
+        actions: [
+          GestureDetector(
+            onTap: () {
+              print('Go To Settings');
+            },
+            child: CircleAvatar(
+              child: Icon(Icons.person),
+              backgroundColor: AppColors.white,
+            ),
+          ),
+        ],
         automaticallyImplyLeading: false,
         backgroundColor: AppColors.primary,
       ),
       body: SafeArea(
-          child: Column(
-        children: [
-          IntrinsicHeight(
-            child: Container(
-              width: double.infinity,
-              padding: const EdgeInsets.fromLTRB(10, 20, 10, 30),
-              decoration: const BoxDecoration(
-                  color: AppColors.primary,
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20))),
-              child: Stack(
-                children: [
-                  Column(
-                    children: [
-                      const AppStatisticCard(
-                        icon: Icons.heart_broken_rounded,
-                        iconColor: AppColors.error,
-                        title: 'Perceraian Di Indonesia',
-                        statistic: '129.219 Kasus',
-                        backgroundColor: AppColors.warning,
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Text(
-                        'Data terakhir dari BPS tahun 2023',
-                        style: AppTextStyle.bodyMedium(
-                            color: AppColors.white,
-                            fontWeight: AppFontWeight.bold),
-                      )
-                    ],
-                  )
-                ],
+        child: SingleChildScrollView(
+            child: Column(
+          children: [
+            IntrinsicHeight(
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.fromLTRB(10, 20, 10, 30),
+                decoration: const BoxDecoration(
+                    color: AppColors.primary,
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20))),
+                child: Stack(
+                  children: [
+                    Column(
+                      children: [
+                        const AppStatisticCard(
+                          icon: Icons.heart_broken_rounded,
+                          iconColor: AppColors.white,
+                          title: 'Perceraian Di Indonesia',
+                          titleColor: AppColors.white,
+                          statistic: '129.219 Kasus',
+                          backgroundColor: AppColors.yellowLv2,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          'Data terakhir dari BPS tahun 2023',
+                          style: AppTextStyle.bodyMedium(
+                              color: AppColors.white,
+                              fontWeight: AppFontWeight.bold),
+                        )
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
-      )),
+            SizedBox(
+              height: 20,
+            ),
+            // Padding(
+            //     padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            //     child: SingleChildScrollView(
+            //       scrollDirection: Axis.horizontal,
+            //       child: Row(
+            //         children: [
+            //           Material(
+            //             color: AppColors.transparent,
+            //             child: InkWell(
+            //               splashColor: AppColors.primary,
+            //               onTap: () {},
+            //               child: Column(
+            //                 children: [Icon(Icons.book), Text('Edukasi')],
+            //               ),
+            //             ),
+            //           )
+            //         ],
+            //       ),
+            //     ))
+          ],
+        )),
+      ),
     );
   }
 }

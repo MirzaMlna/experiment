@@ -6,7 +6,7 @@ import 'package:mobile_user/view_model/registration/registration_view_model.dart
 import 'package:mobile_user/app/theme/app_text_style.dart';
 import 'package:mobile_user/widgets/app_appbar.dart';
 import 'package:mobile_user/widgets/app_button.dart';
-import 'package:mobile_user/widgets/app_gender_select.dart';
+import 'package:mobile_user/widgets/_app_gender_select.dart';
 import 'package:mobile_user/widgets/app_text_field.dart';
 
 class RegistrationView extends StatefulWidget {
@@ -61,14 +61,9 @@ class _RegistrationViewState extends State<RegistrationView> {
   Widget registerForm(BuildContext context) {
     return Column(
       children: [
-        Text(
-          "Pilih Gender Anda",
-          style: AppTextStyle.heading5(),
-        ),
         SizedBox(
           height: 20,
         ),
-        AppGenderSelect(),
         SizedBox(
           height: 20,
         ),

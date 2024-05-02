@@ -47,11 +47,13 @@ class _AppStatisticCardState extends State<AppStatisticCard> {
             Text(
               widget.title,
               style: AppTextStyle.bodyLarge(
-                  fontWeight: AppFontWeight.medium, color: AppColors.white),
+                fontWeight: AppFontWeight.regular,
+                color: widget.titleColor ?? AppColors.white,
+              ),
             ),
-            const VerticalDivider(
-              color: AppColors.white,
-              thickness: 2,
+            VerticalDivider(
+              color: widget.titleColor ?? AppColors.white,
+              thickness: 1,
             ),
             Text(
               widget.statistic,
