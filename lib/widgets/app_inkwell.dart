@@ -27,6 +27,7 @@ class _AppInkWellState extends State<AppInkWell> {
   @override
   Widget build(BuildContext context) {
     return Material(
+      elevation: 2,
       borderRadius: BorderRadius.circular(widget.borderRadius ?? 10),
       color: widget.backgroundColor ?? AppColors.transparent,
       child: InkWell(
