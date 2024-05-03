@@ -3,16 +3,16 @@ import 'package:mobile_user/app/theme/app_colors.dart';
 import 'package:mobile_user/app/theme/app_text_style.dart';
 import 'package:mobile_user/widgets/app_appBar.dart';
 
-class SavingsView extends StatefulWidget {
-  const SavingsView({super.key});
+class NotesView extends StatefulWidget {
+  const NotesView({super.key});
 
   static const routeName = '/saving';
 
   @override
-  State<SavingsView> createState() => _SavingsViewState();
+  State<NotesView> createState() => _NotesViewState();
 }
 
-class _SavingsViewState extends State<SavingsView> {
+class _NotesViewState extends State<NotesView> {
   @override
   Widget build(BuildContext context) {
     return const NavigationExample();

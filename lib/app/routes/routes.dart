@@ -7,7 +7,7 @@ import 'package:mobile_user/views/home/home_view.dart';
 import 'package:mobile_user/views/login/login_view.dart';
 import 'package:mobile_user/views/main/main_view.dart';
 import 'package:mobile_user/views/registration/registration_view.dart';
-import 'package:mobile_user/views/savings/savings_view.dart';
+import 'package:mobile_user/views/notes/notes_view.dart';
 import 'package:mobile_user/views/widget_list/pages_list_view.dart';
 
 class AppRoutes {
@@ -19,7 +19,7 @@ class AppRoutes {
     RegistrationView.routeName: (context) => const RegistrationView(),
     HomeView.routeName: (context) => const HomeView(),
     MainView.routeName: (context) => const MainView(),
-    SavingsView.routeName: (context) => const SavingsView(),
+    NotesView.routeName: (context) => const NotesView(),
     CompabilityTestView.routeName: (context) => const CompabilityTestView(),
   };
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile_user/app/theme/app_colors.dart';
 import 'package:mobile_user/views/home/home_view.dart';
 import 'package:mobile_user/views/registration/registration_view.dart';
-import 'package:mobile_user/views/savings/savings_view.dart';
+import 'package:mobile_user/views/notes/notes_view.dart';
 import 'package:mobile_user/widgets/app_appbar.dart';
 
 class MainView extends StatefulWidget {
@@ -16,7 +16,7 @@ class MainView extends StatefulWidget {
 
 class _MainViewState extends State<MainView> {
   int _selectedIndex = 0;
-  final List _selectedPage = [HomeView(), SavingsView()];
+  final List _selectedPage = [HomeView(), NotesView()];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -50,8 +50,8 @@ class _MainViewState extends State<MainView> {
             label: 'Beranda',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.savings_rounded),
-            label: 'Tabungan',
+            icon: Icon(Icons.notes),
+            label: 'Catatan',
           ),
         ],
         currentIndex: _selectedIndex,
