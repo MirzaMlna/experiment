@@ -31,8 +31,12 @@ class _NavigationExampleState extends State<NavigationExample> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: AppAppbar(
-        title: 'Savings Screen',
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [Icon(Icons.savings), Text('Halaman Tabungan')],
+        ),
       ),
     );
   }
