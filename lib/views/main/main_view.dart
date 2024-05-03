@@ -33,7 +33,7 @@ class _MainViewState extends State<MainView> {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
           onPressed: () {
-            Navigator.pushNamed(context, '/login');
+            Navigator.pushNamed(context, '/compability');
           },
           child: const Icon(
             Icons.emoji_emotions,

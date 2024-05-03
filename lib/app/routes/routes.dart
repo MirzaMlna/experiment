@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mobile_user/views/compability_test/compability_test_view.dart';
 
 import 'package:mobile_user/views/dev/dev_view.dart';
 import 'package:mobile_user/views/home/home_view.dart';
@@ -19,5 +20,6 @@ class AppRoutes {
     HomeView.routeName: (context) => const HomeView(),
     MainView.routeName: (context) => const MainView(),
     SavingsView.routeName: (context) => const SavingsView(),
+    CompabilityTestView.routeName: (context) => const CompabilityTestView(),
   };
 }

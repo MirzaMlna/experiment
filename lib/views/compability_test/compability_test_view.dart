@@ -3,6 +3,7 @@ import 'package:mobile_user/widgets/app_appbar.dart';
 
 class CompabilityTestView extends StatefulWidget {
   const CompabilityTestView({super.key});
+  static const routeName = '/compability';
 
   @override
   State<CompabilityTestView> createState() => _CompabilityTestViewState();

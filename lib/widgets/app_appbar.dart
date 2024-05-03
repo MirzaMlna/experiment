@@ -62,7 +62,7 @@ class AppAppbar extends StatelessWidget implements PreferredSizeWidget {
       titleTextStyle:
           titleTextStyle ?? AppTextStyle.heading5(color: AppColors.white),
       systemOverlayStyle: systemOverlayStyle,
-      backgroundColor: backgroundColor,
+      backgroundColor: backgroundColor ?? AppColors.primary,
     );
   }
 
